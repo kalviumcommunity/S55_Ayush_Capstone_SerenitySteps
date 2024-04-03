@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    background-color: black;
+    height: 100px;
+}
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+.container{ 
+    display: flex;
+    background-color: #AAE290;
+    height: 80vh;
+    width: 50vw;
+    border-radius: 10px;
+    margin-top: 25vh;
+    margin-left: 25vw;
+    text-align: center;
+}
+.greetings{
+    margin-top: 15vh;
+    margin-left: 12vw;
+    font-weight: bold;
+    font-size: 30px;
+}
+#ss{
+    margin-top: 2vh;
+}
