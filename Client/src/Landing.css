@@ -17,19 +17,29 @@
 .container{ 
     display: flex;
     background-color: #AAE290;
-    height: 80vh;
-    width: 50vw;
-    border-radius: 10px;
-    margin-top: 25vh;
-    margin-left: 25vw;
+    height: 70vh;
+    width: 45vw;
+    border-radius: 8px;
+    margin-top: 15vh;
+    margin-left: 27vw;
     text-align: center;
+    margin-bottom: 15vh;
 }
 .greetings{
     margin-top: 15vh;
-    margin-left: 12vw;
+    margin-left: 7vw;
     font-weight: bold;
     font-size: 30px;
 }
 #ss{
     margin-top: 2vh;
+}
+.signupbtn{
+    height: 5vh;
+    width: 10vw;
+    margin-top: 10vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
