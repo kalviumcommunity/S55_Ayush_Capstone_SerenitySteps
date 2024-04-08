@@ -9,7 +9,9 @@ function Home() {
             <nav>
                 <div className='navbar'>
                     <h1 className='title'>Serenity Steps</h1>
+                    <Link to="/Login"><button className='loginbtn'>Login</button></Link>
                 </div>
+                
             </nav>
             <div className='container'>
                 <div className='greetings'>

@@ -1,6 +1,7 @@
 import './Signup.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Signup() {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ function Signup() {
     <>
       <nav>
         <div className='navbar'>
-          <h1 className='title'>Serenity Steps</h1>
+          <Link to="/"><button className='title'>Serenity Steps</button></Link>
         </div>
       </nav>
       <div className="form-container">
