@@ -7,6 +7,9 @@
     background-color: black;
     height: 100px;
 }
+.title{
+  text-decoration: none;
+}
 .form-container{
     display: flex;
     justify-content: center;

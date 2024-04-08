@@ -27,7 +27,7 @@ function Signup() {
     <>
       <nav>
         <div className='navbar'>
-          <Link to="/"><button className='title'>Serenity Steps</button></Link>
+          <Link to="/" className='title'><h1>Serenity Steps</h1></Link>
         </div>
       </nav>
       <div className="form-container">

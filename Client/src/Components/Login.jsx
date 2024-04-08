@@ -6,16 +6,22 @@ function Login() {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loginError, setLoginError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
         try {
-          
-          navigate('/'); 
+            setTimeout(() => {
+                navigate('/');
+                setIsLoading(false); 
+            }, 2000); 
         } catch (error) {
-          setSignupError(error.message);
+            setLoginError(error.message);
+            setIsLoading(false);
         }
-      };
+    };
     
 
     return(
@@ -40,9 +46,9 @@ function Login() {
                      minLength={6}
                     />
                     <br />
-                    <button type="submit" className="login-btn">Login</button>
+                    <button type="submit" className="login-btn" disabled={isLoading}> {isLoading ? 'Logging in...' : 'Login'}</button>
             </form>
-       
+            {loginError && <p className="error-message">{loginError}</p>}
         </div>
         </>
     )
