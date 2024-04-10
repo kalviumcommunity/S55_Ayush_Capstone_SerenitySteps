@@ -63,3 +63,12 @@
     margin-left: 6vw;
     font-weight: bolder;
   }
+  .aboutUs-btn{
+    height: 4vh;
+    width: 15vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 2vw;
+}

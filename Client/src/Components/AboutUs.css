@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+}
+.Aboutus-container{
+    display: flex;
+    background-color: #AAE290;
+    height: 75vh;
+    width: 48rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 24rem;
+    margin-bottom: 5em;
+}
+.au-container{
+    display: flex;
+    background-color: white;
+    height: 55vh;
+    width: 40rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 4rem;
+    
+}
+.info{
+    margin-top: 2em; 
+    font-size: 2rem;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.signUpbtn{
+    height: 1.5em;
+    width: 4.5em;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-left: 60rem;
+}
