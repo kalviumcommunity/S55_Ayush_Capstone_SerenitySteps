@@ -16,18 +16,29 @@ const startDatabase = async () => {
     }
 };
 
-app.get('/data',async(req,res)=>{
-    try{
-        console.log(Model)
+app.get('/data', async (req, res) => {
+    try {
+        console.log(Model);
         const data = await Model.find();
         console.log(data);
-        res.status(200).send(data)
+        res.status(200).send(data);
+    } catch (err) {
+        let statusCode = 500;
+        let errorMessage = "Internal Server Error";
+
+        if (err.name === 'ValidationError') {
+            statusCode = 400;
+            errorMessage = "Validation Error";
+        } else if (err.name === 'CastError') {
+            statusCode = 404;
+            errorMessage = "Resource Not Found";
+        } else {
+            console.error(err);
+        }
+
+        res.status(statusCode).send(errorMessage);
     }
-    catch(err){
-        res.status(401).send(err)
-        console.log(err);
-    }
-})
+});
 
 app.get('/',(req,res)=>{
     res.send(connectionStatus)
