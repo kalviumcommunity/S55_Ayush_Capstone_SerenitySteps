@@ -6,7 +6,10 @@ const {userModel} = require("./UserSchema")
 const bcrypt = require('bcrypt')
 const cors = require('cors')
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173'
+}));
+
 
 let connectionStatus = 'disconnected';
 
