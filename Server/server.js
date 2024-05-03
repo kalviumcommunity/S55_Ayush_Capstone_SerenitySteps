@@ -2,7 +2,11 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 const mongoose = require('mongoose')
-const {Model} = require("./UserSchema")
+const {userModel} = require("./UserSchema")
+const bcrypt = require('bcrypt')
+const cors = require('cors')
+
+app.use(cors());
 
 let connectionStatus = 'disconnected';
 
@@ -39,6 +43,58 @@ app.get('/data', async (req, res) => {
         res.status(statusCode).send(errorMessage);
     }
 });
+
+app.post('/signup', async (req, res) => {
+    const { firstName, lastName, contactNumber, email, username, password } = req.body;
+    try {
+        // Check if the email already exists
+        const emailExists = await userModel.findOne({ email });
+        if (emailExists) {
+            return res.status(400).send("User already exists");
+        }
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(password, 10);
+        // Create a new user
+        const newUser = new userModel({
+            firstName,
+            lastName,
+            contactNumber,
+            email,
+            username,
+            password: hashedPassword
+        });
+        await newUser.save();
+        res.status(201).send("Congrats! You signed up successfully");
+    } catch (err) {
+        console.error("Error in signing up user", err);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        // Check if the user exists
+        const user = await userModel.findOne({ email });
+        if (!user) {
+            return res.status(404).send("User not found. Please create an account.");
+        }
+        // Compare passwords
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (passwordMatch) {
+            return res.status(200).json({
+                message: "You logged in successfully!",
+                userId: user._id
+            });
+        } else {
+            return res.status(401).send("Incorrect password");
+        }
+    } catch (error) {
+        console.error("Error while comparing passwords:", error);
+        res.status(500).send("Internal Server Error");
+    }
+});
+  
 
 app.get('/',(req,res)=>{
     res.send(connectionStatus)
