@@ -2,11 +2,12 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 const mongoose = require('mongoose')
-const {userModel} = require("./UserSchema")
+const {userModel} = require("./UserSchema.js")
 const bcrypt = require('bcrypt')
 const cors = require('cors')
 
 app.use(cors())
+app.use(express.json())
 
 app.use(function (req, res, next) {
     //Enabling CORS
@@ -21,7 +22,7 @@ let connectionStatus = 'disconnected';
 
 const startDatabase = async () => {
     try {
-        await mongoose.connect('mongodb+srv://ayushtiwari:ayushtiwari@cluster0.se8rtw5.mongodb.net/SerenityStepsDB?retryWrites=true&w=majority&appName=Cluster0');
+        await mongoose.connect(process.env.URI);
         connectionStatus = "The database has been connected!!";
     } catch (err) {
         console.error("Failed to connect to database",err);
@@ -31,8 +32,8 @@ const startDatabase = async () => {
 
 app.get('/data', async (req, res) => {
     try {
-        console.log(Model);
-        const data = await Model.find();
+        console.log(userModel);
+        const data = await userModel.find();
         console.log(data);
         res.status(200).send(data);
     } catch (err) {
@@ -53,27 +54,25 @@ app.get('/data', async (req, res) => {
     }
 });
 
+
+
 app.post('/signup', async (req, res) => {
-    const { firstName, lastName, contactNumber, email, username, password } = req.body;
+    console.log(req.body,"req")
+    
     try {
+        
         // Check if the email already exists
-        const emailExists = await userModel.findOne({ email });
+        const emailExists = await userModel.findOne({ email: req.body.email});
         if (emailExists) {
+            console.log("email exists")
             return res.status(400).send("User already exists");
         }
         // Hash the password
-        const hashedPassword = await bcrypt.hash(password, 10);
+        // const hashedPassword = await bcrypt.hash(req.body.password, 10);
         // Create a new user
-        const newUser = new userModel({
-            firstName,
-            lastName,
-            contactNumber,
-            email,
-            username,
-            password: hashedPassword
-        });
+        const newUser = new userModel(req.body);
         await newUser.save();
-        res.status(201).send("Congrats! You signed up successfully");
+        res.status(201).send({message:"congrats",data:newUser});
     } catch (err) {
         console.error("Error in signing up user", err);
         res.status(500).send("Internal Server Error");

@@ -16,9 +16,11 @@ function Signup() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const userdata = { firstName, lastName, email, username, password }; // Simplified object creation
+    const userdata = { firstName, lastName,contactNumber, email, username, password }; // Simplified object creation
+    console.log(userdata)
     try {
-      const response = await axios.post("https://s55-ayush-capstone-serenitysteps.onrender.com/signup", userdata);
+      const response = await axios.post("http://localhost:3000/signup", userdata);
+      console.log(response)
       alert(response.data);
       navigate("/");
     } catch (error) {
