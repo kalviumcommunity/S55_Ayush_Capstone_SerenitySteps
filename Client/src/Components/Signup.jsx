@@ -1,7 +1,8 @@
-import './Signup.css'
+import './Signup.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Corrected import
 
 function Signup() {
   const navigate = useNavigate();
@@ -15,10 +16,15 @@ function Signup() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    const userdata = { firstName, lastName,contactNumber, email, username, password }; // Simplified object creation
+    console.log(userdata)
     try {
-      
-      navigate('/'); 
+      const response = await axios.post("http://localhost:3000/signup", userdata);
+      console.log(response)
+      alert(response.data);
+      navigate("/");
     } catch (error) {
+      console.error("Error signing up:", error.message);
       setSignupError(error.message);
     }
   };
