@@ -6,12 +6,13 @@
     display: flex;
     background-color: black;
     height: 100px;
+    align-items: center;
+    justify-content: space-between;
 }
 .title{
     color: white;
     font-weight: bold;
     font-size: 30px;
-    margin-top: 4vh;
     margin-left: 2vw;
 }
 .container{ 
@@ -42,4 +43,22 @@
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+}
+.loginbtn{
+    height: 4vh;
+    width: 10vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 2vw;
+}
+.aboutUs-btn{
+    height: 4vh;
+    width: 10vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 70vw;
 }

@@ -2,35 +2,28 @@
     margin: 0;
     padding: 0;
 }
-.navbar{
-    display: flex;
-    background-color: black;
-    height: 100px;
-}
-.title{
-  text-decoration: none;
-}
 .form-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative;   
+   
 }
 
-.signupform {
-    background-color: rgba(255, 255, 255, 0.9);
+.loginform {
+    background-color: #AAE290;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+       
   }
   
-  .signupform label {
+  .loginform label {
     font-weight: bold;
   }
   
-  .signupform input {
+  .loginform input {
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
@@ -39,7 +32,7 @@
     box-sizing: border-box;
   }
   
-  .signupform input[type="submit"] {
+  .loginform input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -50,25 +43,17 @@
     width: 100%;
   }
   
-  .signupform input[type="submit"]:hover {
+  .loginform input[type="submit"]:hover {
     background-color: #45a049;
   }
   
-
-
-.signup-btn{
-    height: 5vh;
-    width: 6vw;
+.login-btn{
+    height: 3rem;
+    width: 6rem;
     border-radius: 8px;
-    margin-left: 6vw;
+    margin-left: 6rem;
     font-weight: bolder;
-  }
-  .aboutUs-btn{
-    height: 4vh;
-    width: 15vh;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
     font-size: 20px;
-    margin-right: 2vw;
-}
+  }
+
+  
