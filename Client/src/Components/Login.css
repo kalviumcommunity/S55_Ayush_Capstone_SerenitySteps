@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+.loginform {
+    background-color: #AAE290;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+       
+  }
+  
+  .loginform label {
+    font-weight: bold;
+  }
+  
+  .loginform input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .loginform input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .loginform input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+.login-btn{
+    height: 3rem;
+    width: 6rem;
+    border-radius: 8px;
+    margin-left: 6rem;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    background-color: black;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 2vw;
+}
+.container{ 
+    display: flex;
+    background-color: #AAE290;
+    height: 70vh;
+    width: 45vw;
+    border-radius: 8px;
+    margin-top: 15vh;
+    margin-left: 27vw;
+    text-align: center;
+    margin-bottom: 15vh;
+}
+.greetings{
+    margin-top: 15vh;
+    margin-left: 7vw;
+    font-weight: bold;
+    font-size: 30px;
+}
+#ss{
+    margin-top: 2vh;
+}
+.signupbtn{
+    height: 5vh;
+    width: 10vw;
+    margin-top: 10vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.loginbtn{
+    height: 4vh;
+    width: 10vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 2vw;
+}
+.aboutUs-btn{
+    height: 4vh;
+    width: 10vh;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 70vw;
+}
