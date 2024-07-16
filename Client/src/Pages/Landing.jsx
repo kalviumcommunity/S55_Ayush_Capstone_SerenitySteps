@@ -1,7 +1,7 @@
 import './Landing.css';
 import { Link } from 'react-router-dom';
 
-function Home() {
+function Land() {
 
 
     return(
@@ -23,10 +23,12 @@ function Home() {
                     <h3>Click on the Signup to get started</h3>
                     <Link to="/Signup"><button className='signupbtn'>Signup</button></Link>
                 </div>
+            </div>
+            <div>
 
             </div>
         </>
     )
 }
 
-export default Home
+export default Land
