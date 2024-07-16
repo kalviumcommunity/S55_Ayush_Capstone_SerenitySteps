@@ -19,7 +19,7 @@ function Signup() {
     const userdata = { firstName, lastName,contactNumber, email, username, password }; // Simplified object creation
     console.log(userdata)
     try {
-      const response = await axios.post("http://localhost:3000/signup", userdata);
+      const response = await axios.post("https://s55-ayush-capstone-serenitysteps.onrender.com/signup", userdata);
       console.log(response)
       alert(response.data);
       navigate("/");
