@@ -4,19 +4,18 @@ require('dotenv').config();
 const cors = require('cors');
 const Router = require('./routes.js');
 
+
 const app = express();
+const corsOptions = {
+    origin: 'http://localhost:5173', 
+    methods: 'GET,HEAD,OPTIONS,POST,PUT',
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization',
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+};
 
-// Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
-
-// Custom headers for CORS
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-    next();
-});
 
 // Routes
 app.use(Router);
@@ -25,7 +24,7 @@ let connectionStatus = 'disconnected';
 
 const startDatabase = async () => {
     try {
-        await mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(process.env.URI);
         connectionStatus = "The database has been connected!!";
     } catch (err) {
         console.error("Failed to connect to database", err);

@@ -18,7 +18,7 @@ function Login() {
             password: password
         };
         try {
-            const response = await axios.post("https://s55-ayush-capstone-serenitysteps.onrender.com/login", loginData);
+            const response = await axios.post("http://s55-ayush-capstone-serenitysteps.onrender.com/login", {username, password} );
             localStorage.setItem('token', response.data.token);
             navigate('/');
         } catch (error) {
