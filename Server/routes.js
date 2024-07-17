@@ -27,20 +27,39 @@ router.post('/signup', async (req, res) => {
 });
 
 // Login route with bcrypt password verification and JWT tokenization
+// router.post('/login', async (req, res) => {
+//     try {
+//         const { username, password } = req.body;    
+//         const user = await userModel.findOne({ username });
+//         if (!user) {
+//             console.log(`Login attempt failed for username: ${username}`);
+//             return res.status(401).json({ error: 'Invalid username or password' });
+//         }
+//         const isPasswordValid = await bcrypt.compare(password, user.password); // Comparing hashed password
+//         if (!isPasswordValid) {
+//             console.log(`Login attempt failed for username: ${username}`);
+//             return res.status(401).json({ error: 'Invalid username or password' });
+//         }
+//         console.log(`Login attempt successful for username: ${username}`);
+//         const token = jwt.sign({ username: user.username }, process.env.ACCESS_TOKEN_SECRET);
+//         res.status(200).json({ success: true, message: 'Login successful', token });
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ error: 'Internal server error' });
+//     }
+// });
+
 router.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
         const user = await userModel.findOne({ username });
         if (!user) {
-            console.log(`Login attempt failed for username: ${username}`);
             return res.status(401).json({ error: 'Invalid username or password' });
         }
-        const isPasswordValid = await bcrypt.compare(password, user.password); // Comparing hashed password
+        const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            console.log(`Login attempt failed for username: ${username}`);
             return res.status(401).json({ error: 'Invalid username or password' });
         }
-        console.log(`Login attempt successful for username: ${username}`);
         const token = jwt.sign({ username: user.username }, process.env.ACCESS_TOKEN_SECRET);
         res.status(200).json({ success: true, message: 'Login successful', token });
     } catch (error) {
