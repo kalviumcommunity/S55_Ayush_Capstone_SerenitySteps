@@ -10,7 +10,7 @@
 .title{
   text-decoration: none;
 }
-.form-container{
+.sform-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,8 +60,12 @@
     height: 5vh;
     width: 6vw;
     border-radius: 8px;
-    margin-left: 6vw;
+    margin-left: 5vw;
     font-weight: bolder;
+  }
+  .google-auth{
+    margin-top: 2vh;
+
   }
   .aboutUs-btn{
     height: 4vh;

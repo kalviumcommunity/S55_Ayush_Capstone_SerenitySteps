@@ -1,8 +1,24 @@
 import './Landing.css';
 import { Link } from 'react-router-dom';
+import Typed from 'typed.js';
+import { useEffect, useRef } from 'react';
 
 function Land() {
+    const typedRef = useRef(null);
 
+    useEffect(() => {
+      const options = {
+        strings: ["Hello and Welcome to,<br /><span class='heading'>Serenity Steps</span>"],
+        typeSpeed: 70,
+        loop: true
+      };
+  
+      const typed = new Typed(typedRef.current, options);
+  
+      return () => {
+        typed.destroy();
+      };
+    }, []);
 
     return(
         <>
@@ -12,23 +28,18 @@ function Land() {
                     <Link to="/About"><button className='aboutUs-btn'>About Us</button></Link>
                     <Link to="/Login"><button className='loginbtn'>Login</button></Link>
                 </div>
-                
             </nav>
-            <div className='container'>
-                <div className='greetings'>
-                    <h2>Hello and Welcome to</h2>
-                    <h1 id='ss'>Serenity Steps</h1>
-                    <br />
-                    <br />
-                    <h3>Click on the Signup to get started</h3>
+            <img src="./Bg_capstone.jpeg" alt="" id='bg-img'/>
+            <div id="typed-container">
+                      <span ref={typedRef}></span>
+                      <br />
+                      <div className='message1'><h3 >Click on the Signup to get started</h3></div>
+                    
                     <Link to="/Signup"><button className='signupbtn'>Signup</button></Link>
-                </div>
             </div>
-            <div>
-
-            </div>
+                    
         </>
     )
 }
 
-export default Land
+export default Land;
