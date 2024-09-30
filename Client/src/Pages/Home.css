@@ -1,7 +1,10 @@
+/* Existing styles */
+
 *{
     margin: 0;
     padding: 0;
 }
+
 .continueprev{
     display: flex;
     background-color: #050505;
@@ -12,6 +15,7 @@
     margin-left: 2vw;
     margin-top: 5vh;
 }
+
 .prevsection{
     display: flex;
     align-items: center;
@@ -24,6 +28,7 @@
     text-align: center;
     color: black;
 }
+
 .sssection{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -36,6 +41,7 @@
     border-radius: 15px;
     margin-bottom: 5vh;
 }
+
 .homeblock{
     display: flex;
     background-color: #020202;
@@ -45,10 +51,12 @@
     border-radius: 15px;
     border: 8px solid white;
 }
+
 .homeblock:hover{
     transform: scale(1.1);
     transition: 0.5s;
 } 
+
 .home-btn{
     display: flex;
     justify-content: center;
@@ -64,7 +72,6 @@
     font-weight: bold;
     font-size: 20px;
     position: absolute;
-    
 }
 
 .homebox{
@@ -77,10 +84,72 @@
     margin-top: 3vh;
     border-radius: 8px;
 }
+
 .homebox-logo{
     height: 35vh;
     width: 15vw;
     border-radius: 8px;
-    
 }
 
+/* Media queries for screens under 700px */
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .aboutUs-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .continueprev {
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    .prevsection {
+        width: 90vw;
+        margin-left: 5vw;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .sssection {
+        grid-template-columns: 1fr;
+        width: 90vw;
+        margin-left: 5vw;
+        height: auto;
+    }
+
+    .homeblock {
+        width: 80vw;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .homebox {
+        width: 70vw;
+        margin-left: 5vw;
+    }
+
+    .homebox-logo {
+        width: 70vw;
+        height: auto;
+    }
+
+    .home-btn {
+        width: 70vw;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
