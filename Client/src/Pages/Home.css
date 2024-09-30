@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.continueprev{
+    display: flex;
+    background-color: #050505;
+    height: 35vh;
+    width: 95vw;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: 2vw;
+    margin-top: 5vh;
+}
+.prevsection{
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    width: 92vw;
+    background-color: rgb(243, 248, 252);
+    border-radius: 20px;
+    margin-left: 1.5vw;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+.sssection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #060606;
+    height: 150vh;
+    width: 70vw;
+    align-items: center;
+    margin-left: 15vw;
+    margin-top: 5vh;
+    border-radius: 15px;
+    margin-bottom: 5vh;
+}
+.homeblock{
+    display: flex;
+    background-color: #020202;
+    height: 55vh;
+    width: 20vw;
+    margin-left: 7vw;
+    border-radius: 15px;
+    border: 8px solid white;
+}
+.homeblock:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+} 
+.home-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 10vw;
+    color: rgb(11, 11, 11);
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: rgb(252, 249, 249);
+    margin-top: 40vh;
+    margin-left: 2.5vw;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    
+}
+
+.homebox{
+    display: flex;
+    align-items: start;
+    height: 60%;
+    width: 15vw;
+    background-color: rgb(247, 244, 244);
+    margin-left: 2vw;
+    margin-top: 3vh;
+    border-radius: 8px;
+}
+.homebox-logo{
+    height: 35vh;
+    width: 15vw;
+    border-radius: 8px;
+    
+}
+

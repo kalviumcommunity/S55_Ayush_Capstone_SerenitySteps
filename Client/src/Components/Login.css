@@ -2,21 +2,30 @@
     margin: 0;
     padding: 0;
 }
-.form-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   
+.baap{
+  display: flex;
+  margin-top: 25vh;
+}
+.side{
+  background-color: #fffefe;
+  padding: 20px;
+  width: 60%;
+  margin-left: 3vw;
+}
+.lform-container{
+  background-color: #fbfdfe;
+  display: flex;
+  align-items: start;
+  justify-content: start;
 }
 
 .loginform {
-    background-color: #AAE290;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-       
+    width: 25vw;
+    height: 40vh;
   }
   
   .loginform label {
@@ -27,7 +36,7 @@
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccd0d5;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -49,11 +58,41 @@
   
 .login-btn{
     height: 3rem;
-    width: 6rem;
-    border-radius: 8px;
-    margin-left: 6rem;
-    font-weight: bolder;
-    font-size: 20px;
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #signin101{
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center ;
+    text-decoration: none;
+    font-weight: bold;
+
+  
+    margin-top: 2vh;
+  }
+  #fp{
+    color: #0866ff;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    
+  }
+  #line{
+    border-bottom: 1px solid #cccdce;
+    margin-top: 1vh;
+    margin: 20px 16px;
   }
 
   

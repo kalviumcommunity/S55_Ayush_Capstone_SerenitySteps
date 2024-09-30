@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios'; // Corrected import
+import {GoogleLogin , GoogleOAuthProvider} from "@react-oauth/google"
+
+const clientID = "85462322080-3ie3vc4olh1oi5puuv4b3j3p71get9f6.apps.googleusercontent.com"
 
 function Signup() {
   const navigate = useNavigate();
@@ -13,6 +16,7 @@ function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [signupError, setSignupError] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +32,16 @@ function Signup() {
       setSignupError(error.message);
     }
   };
+  const onSuccess = (res) => {
+    console.log("LOGIN SUCCESS! Current User: ", res.profileObj);
+    alert("Google Signup Successful!");
+    setIsLoggedIn(true);
+    
+    setTimeout(() => {
+      
+      navigate("/"); 
+    }, 2000);
+  };
 
   return (
     <>
@@ -37,7 +51,7 @@ function Signup() {
           <Link to="/About"><button className='aboutUs-btn'>About Us</button></Link>
         </div>
       </nav>
-      <div className="form-container">
+      <div className="sform-container">
         <form className="signupform" onSubmit={handleFormSubmit}>
           <label>First Name:</label>
           <input 
@@ -95,6 +109,12 @@ function Signup() {
           <br />
 
           <button type="submit" className="signup-btn">SIGNUP</button>
+          <div className="google-auth">
+          <GoogleOAuthProvider clientId={clientID} >
+          <GoogleLogin onSuccess={onSuccess} text="signup_with"/>
+          </GoogleOAuthProvider>
+          </div>
+          
         </form>
       </div>
     </>
