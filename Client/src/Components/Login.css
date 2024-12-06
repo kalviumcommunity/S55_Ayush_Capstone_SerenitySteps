@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,18 +6,31 @@
 .baap{
   display: flex;
   margin-top: 25vh;
+  justify-content: space-evenly;
+  
 }
-.side{
-  background-color: #fffefe;
+.side {
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  border-radius: 8px;
   padding: 20px;
-  width: 60%;
-  margin-left: 3vw;
+  width: 55vw;
+  margin-left: 5vw;
+  height: 45vh;
+}
+#web-name{
+  font-family: "Bokor", system-ui;
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  
 }
 .lform-container{
   background-color: #fbfdfe;
+  border-radius: 8px;
   display: flex;
   align-items: start;
   justify-content: start;
+  margin-right: 10vw;
 }
 
 .loginform {
@@ -25,7 +39,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 25vw;
-    height: 40vh;
+    height: 45vh;
   }
   
   .loginform label {
@@ -59,7 +73,7 @@
 .login-btn{
     height: 3rem;
     width: 100%;
-    background-color: #007bff;
+    background-color: #1A77F2;
     color: #ffffff;
     font-weight: bold;
     padding: 10px;
@@ -68,26 +82,32 @@
     cursor: pointer;
   }
   #signin101{
-    padding: 10px;
-    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 6vh;
+    width: 15vw;
+    background-color: #42B62A;
     color: #ffffff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    text-align: center ;
     text-decoration: none;
-    font-weight: bold;
-
-  
+    font-size: 20px;
+    margin-left: 3.5vw;
     margin-top: 2vh;
   }
   #fp{
     color: #0866ff;
+    border: none;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
     margin-top: 2vh;
-    margin-left: 4vw;
-    
+    margin-left: 3.5vw;    
+  }
+  #fp:hover{
+    text-decoration: underline;
   }
   #line{
     border-bottom: 1px solid #cccdce;

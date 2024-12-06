@@ -4,8 +4,10 @@
 }
 .navbar{
     display: flex;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.1);
     height: 100px;
+    justify-content: space-between;
+    align-items: center;
 }
 .title{
   text-decoration: none;
@@ -14,7 +16,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;   
 }
 
@@ -23,7 +24,10 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
+    height: 82vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
   
   .signupform label {
@@ -54,25 +58,19 @@
     background-color: #45a049;
   }
   
-
-
 .signup-btn{
     height: 5vh;
-    width: 6vw;
+    width: 8vw;
     border-radius: 8px;
-    margin-left: 5vw;
+    margin-left: 7vw;
     font-weight: bolder;
   }
   .google-auth{
     margin-top: 2vh;
+    margin-left: 3.5vw;
 
   }
-  .aboutUs-btn{
-    height: 4vh;
-    width: 15vh;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 2vw;
+ 
+.Boxx{
+  margin-top: 1vh;
 }

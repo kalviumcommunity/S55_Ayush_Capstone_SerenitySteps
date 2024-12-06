@@ -7,13 +7,12 @@ function Games(){
         <>
             <nav>
                 <div className='navbar'>
-                    <h1 className='title'>Serenity Steps</h1> 
-                    <h1 className='sectionhead'>Mind Games</h1>
-                    <Link to="/About"><button className='aboutUs-btn'>About Us</button></Link>
-                    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-                    
+                <Link to="/home" className='title'><h1>Serenity Steps</h1></Link>
+                                        
                 </div> 
             </nav>
+            <img src="./Bg_capstone.jpeg" alt="" id='home-bg'/>
+            <h1 className='sectionghead'>Mind Games</h1>
             <div className='sssection'>
                 <div className="homeblock" >
                     <div className='homebox'>
