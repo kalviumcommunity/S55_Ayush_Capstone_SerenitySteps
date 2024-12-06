@@ -31,14 +31,18 @@ function Login() {
 
     return (
         <>
+        
         <div className="baap">
-        <div className='side'>
+            
+            <div className='side'>
                 <div >
                     <img src="" alt="" />
-                    <h1>Serenity Steps</h1>
+                    <h1 id='web-name'>Serenity Steps</h1>
                 </div>
+
                 <h2>Serenity Steps helps user to reach their wellness goals and improve their general health by taking a coordinated approach to well-being.</h2>
             </div>
+            <img src="./Bg_capstone.jpeg" alt="" id='bg-img'/>
             <div className="lform-container">
             <form className="loginform" onSubmit={handleFormSubmit}>
                 <input 
@@ -61,9 +65,9 @@ function Login() {
                 <button type="submit" className="login-btn" disabled={isLoading}>
                     {isLoading ? 'Logging in...' : 'Login'}
                 </button>
-                <div id='fp'><a href="" id='fp'>Forgotten password?</a></div>
+                <div id='fp'><a href="" id='fp'>Forgotten Password?</a></div>
                 <div id='line'></div>
-                <div id='signin101'><Link to="/signup" id='signin101'> Create new account</Link></div>
+                <div id='signin10'><Link to="/signup" id='signin101'> Create new account</Link></div>
                 
             </form>
             {loginError && <p className="error-message">{loginError}</p>}

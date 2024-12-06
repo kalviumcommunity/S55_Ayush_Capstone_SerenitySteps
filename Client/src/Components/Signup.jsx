@@ -39,7 +39,7 @@ function Signup() {
     
     setTimeout(() => {
       
-      navigate("/"); 
+      navigate("/home"); 
     }, 2000);
   };
 
@@ -48,14 +48,15 @@ function Signup() {
       <nav>
         <div className='navbar'>
           <Link to="/" className='title'><h1>Serenity Steps</h1></Link>
-          <Link to="/About"><button className='aboutUs-btn'>About Us</button></Link>
         </div>
       </nav>
+      <img src="./Bg_capstone.jpeg" alt="" id='bg-img'/>
       <div className="sform-container">
         <form className="signupform" onSubmit={handleFormSubmit}>
           <label>First Name:</label>
           <input 
             type="text"
+            className="Boxx"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
@@ -65,6 +66,7 @@ function Signup() {
           <label>Last Name:</label>
           <input 
             type="text"
+            className="Boxx"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
@@ -74,6 +76,7 @@ function Signup() {
           <label>Contact Number:</label>
           <input 
             type="tel"
+            className="Boxx"
             value={contactNumber}
             onChange={(e) => setContactNumber(e.target.value)}
             required
@@ -82,6 +85,7 @@ function Signup() {
 
           <label>Email:</label>
           <input 
+            className="Boxx"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -92,6 +96,7 @@ function Signup() {
           <label>Create Username:</label>
           <input 
             type="text"
+            className="Boxx"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -101,6 +106,7 @@ function Signup() {
           <label>Create Password:</label>
           <input
             type="password"
+            className="Boxx"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required

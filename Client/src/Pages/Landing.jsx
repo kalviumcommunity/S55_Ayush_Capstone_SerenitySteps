@@ -8,7 +8,7 @@ function Land() {
 
     useEffect(() => {
       const options = {
-        strings: ["Hello and Welcome to,<br /><span class='heading'>Serenity Steps</span>"],
+        strings: ["Hello and Welcome to <br /><span class='heading'>Serenity Steps</span>"],
         typeSpeed: 70,
         loop: true
       };
@@ -23,19 +23,18 @@ function Land() {
     return(
         <>
             <nav>
-                <div className='navbar'>
+                <div className='navbarL'>
                     <h1 className='title'>Serenity Steps</h1>
-                    <Link to="/About"><button className='aboutUs-btn'>About Us</button></Link>
-                    <Link to="/Login"><button className='loginbtn'>Login</button></Link>
+                    <Link to="/Login"><button className='loginbtnL'>Login</button></Link>
                 </div>
             </nav>
             <img src="./Bg_capstone.jpeg" alt="" id='bg-img'/>
             <div id="typed-container">
                       <span ref={typedRef}></span>
                       <br />
-                      <div className='message1'><h3 >Click on the Signup to get started</h3></div>
+                      <div className='message1'><h3 >Start your journey by signing up</h3></div>
                     
-                    <Link to="/Signup"><button className='signupbtn'>Signup</button></Link>
+                    <Link to="/Signup"><button className='signupbtnL'>Signup</button></Link>
             </div>
                     
         </>

@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
 }
-.sectionhead{
-    color: aliceblue;
-    margin-left: 15vw;
-    margin-bottom: 30vh;
-    
+.sectionghead{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5vh;    
 }
