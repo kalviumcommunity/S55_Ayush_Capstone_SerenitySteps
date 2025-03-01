@@ -5,10 +5,10 @@ import Signup from './Components/Signup'
 import Login from './Components/Login'
 import Home from './Pages/Home'
 import Meditation from './Pages/Meditation'
-
+import Workout from './Pages/Workout'
 import Games from './Pages/Games'
+import DietPlan from './Pages/DietPlan'
 
-// import Chess from './Pages/Chess'
 
 function App() {
 
@@ -22,6 +22,9 @@ function App() {
         <Route path='/home' element={<Home/>}/>
         <Route path='/meditate' element={<Meditation/>}/>
         <Route path='/games' element={<Games/>}/>
+        <Route path='/workout' element={<Workout/>}/>
+        <Route path='/diet' element={<DietPlan/>}/>
+        
         
       </Routes>
       

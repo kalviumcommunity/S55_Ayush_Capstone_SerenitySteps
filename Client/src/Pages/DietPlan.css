@@ -1,0 +1,385 @@
+.diet-plan-container {
+    min-height: 100vh;
+    position: relative;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  #diet-bg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.7);
+  }
+  
+  .navbar {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-family: "Bokor", system-ui;
+    color: white;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  
+  .diet-content {
+    padding-top: 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  
+  .diet-title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Calculator Form Styling */
+  .calculator-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-group input[type="number"],
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .input-with-unit {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .input-with-unit input {
+    flex: 1;
+  }
+  
+  .input-with-unit select {
+    width: 80px;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
+  .calculate-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .calculate-button:hover {
+    background-color: #3a7bc8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+  }
+  
+  /* Results Styling */
+  .results-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nutrition-summary {
+    margin-bottom: 40px;
+  }
+  
+  .nutrition-summary h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .macro-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .macro-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .macro-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .macro-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .calories {
+    background-color: #ffebee;
+  }
+  
+  .protein {
+    background-color: #e8f5e9;
+  }
+  
+  .carbs {
+    background-color: #fff8e1;
+  }
+  
+  .fats {
+    background-color: #e1f5fe;
+  }
+  
+  .water {
+    background-color: #e8eaf6;
+  }
+  
+  .macro-card h3 {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .macro-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 0 0;
+    color: #333;
+  }
+  
+  .goal-message {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .goal-message h3 {
+    margin-top: 0;
+    color: #4a90e2;
+  }
+  
+  .meal-plan-section {
+    margin-bottom: 40px;
+  }
+  
+  .meal-plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .meal-plan-header h2 {
+    margin: 0;
+  }
+  
+  .regenerate-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .regenerate-button:hover {
+    background-color: #3d8b40;
+    transform: translateY(-2px);
+  }
+  
+  .meal-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .meal-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .meal-header h3 {
+    margin: 0;
+    color: #4a90e2;
+  }
+  
+  .meal-calories {
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .meal-card h4 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .meal-description {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .meal-macros {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .nutrition-tips {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .nutrition-tips h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .nutrition-tips ul {
+    padding-left: 20px;
+  }
+  
+  .nutrition-tips li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .recalculate-button {
+    background-color: #757575;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+  
+  .recalculate-button:hover {
+    background-color: #616161;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .diet-title {
+      font-size: 2rem;
+    }
+    
+    .calculator-container,
+    .results-container {
+      padding: 20px;
+    }
+    
+    .macro-cards {
+      gap: 10px;
+    }
+    
+    .macro-card {
+      width: calc(50% - 10px);
+    }
+    
+    .meal-plan-header {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    
+    .meal-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .radio-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
